@@ -233,14 +233,16 @@ class Chef
 end
 
 class ItalianChef < Chef
-
+  def make_special
+    puts "The chef makes tortang talong"
+  end
 end
 
 chef = Chef.new
-chef.make_chicken
+chef.make_special
 
 italian_chef = ItalianChef.new
-italian_chef.make_salad
+italian_chef.make_special
 
 
 
