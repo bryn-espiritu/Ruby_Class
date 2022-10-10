@@ -220,29 +220,45 @@
 #----------------------------------------------------
 
 #inheritance
-class Chef
-  def make_chicken
-    puts "The chef makes Chicken"
+# class Chef
+#   def make_chicken
+#     puts "The chef makes Chicken"
+#   end
+#   def make_salad
+#     puts "The chef makes Salad"
+#   end
+#   def make_special
+#     puts "The chef makes Adobong Manok"
+#   end
+# end
+
+# class ItalianChef < Chef
+#   def make_special
+#     puts "The chef makes tortang talong"
+#   end
+#   def make_pasta
+#     puts "The chef makes Pasta"
+#   end
+# end
+
+# chef = Chef.new
+# chef.make_special
+
+# italian_chef = ItalianChef.new
+# italian_chef.make_pasta
+#----------------------------------------------------
+
+#Module
+
+module Tools
+  def sayhi(name)
+    puts "hello #{name}"
   end
-  def make_salad
-    puts "The chef makes Salad"
-  end
-  def make_special
-    puts "The chef makes Adobong Manok"
+  def saybye(name)
+    puts "bye #{name}"
   end
 end
 
-class ItalianChef < Chef
-  def make_special
-    puts "The chef makes tortang talong"
-  end
-end
-
-chef = Chef.new
-chef.make_special
-
-italian_chef = ItalianChef.new
-italian_chef.make_special
-
-
-
+include Tools
+Tools.sayhi("mike")
+Tools.saybye("Bryn")
